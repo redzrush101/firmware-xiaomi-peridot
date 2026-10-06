@@ -41,3 +41,17 @@ alsatplg -c Xiaomi-Peridot.conf -o Xiaomi-Peridot-tplg.bin
 
 ADSP, CDSP and WPSS firmware is not included: it is loaded from the phone's own
 `modem` partition by msm-firmware-loader.
+
+## ADSP sensors
+
+`hexagonfs/` is served to the ADSP sensor framework by hexagonrpcd and is
+installed at `/usr/share/qcom/palawan/Xiaomi/peridot/`.
+
+| Path | Image path |
+| --- | --- |
+| `hexagonfs/sensors/config/` | odm `/etc/sensors/config/` (all 73 files) |
+| `hexagonfs/sensors/sns_reg.conf` | vendor `/etc/sensors/sns_reg_config` |
+
+The sensor registry with each phone's factory calibration is not included.
+The ADSP needs to write it, so postmarketOS copies it from the phone's own
+`persist` partition into a writable directory on first start.
