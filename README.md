@@ -13,6 +13,7 @@ d2cf79e6b4a29529f8dbd3d96afaad73ef83e9333c95a1f34b114387655cd03d).
 | `qcom/gen71100_sqe.fw` | vendor `/firmware/gen71100_sqe.fw` |
 | `qcom/gen71100_gmu.bin` | vendor `/firmware/gen71100_gmu.bin` |
 | `qcom/palawan/xiaomi/peridot/gen71100_zap.mbn` | odm `/firmware/gen71100_zap.mbn` |
+| `qcom/palawan/xiaomi/peridot/vpu30_2v.mbn` | odm `/firmware/vpu30_2v.mbn` |
 
-ADSP and CDSP firmware is not included: it is loaded from the phone's own
+ADSP, CDSP and WPSS firmware is not included: it is loaded from the phone's own
 `modem` partition by msm-firmware-loader.
